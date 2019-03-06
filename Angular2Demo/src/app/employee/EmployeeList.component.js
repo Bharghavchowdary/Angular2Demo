@@ -12,6 +12,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var EmployeeList = /** @class */ (function () {
     function EmployeeList() {
+        this.selectedEmployeeCountRadioButton = 'All';
         this.employees =
             [
                 {
@@ -29,6 +30,14 @@ var EmployeeList = /** @class */ (function () {
                 {
                     code: 'emp104', name: 'Mary', gender: 'Female',
                     annualSalary: 6500.826, dateOfBirth: '10/14/1980'
+                },
+                {
+                    code: 'emp105', name: 'Steve', gender: 'Female',
+                    annualSalary: 7700.481, dateOfBirth: '11/18/1979'
+                },
+                {
+                    code: 'emp106', name: 'Steve obs', gender: 'Male',
+                    annualSalary: 7700.481, dateOfBirth: '11/18/1979'
                 },
             ];
     }
@@ -50,19 +59,30 @@ var EmployeeList = /** @class */ (function () {
                 code: 'emp104', name: 'Mary', gender: 'Female',
                 annualSalary: 6500.826, dateOfBirth: '14/10/1980'
             },
+            {
+                code: 'emp105', name: 'Steve', gender: 'Female',
+                annualSalary: 7700.481, dateOfBirth: '11/18/1979'
+            },
+            {
+                code: 'emp106', name: 'Steve obs', gender: 'Male',
+                annualSalary: 7700.481, dateOfBirth: '11/18/1979'
+            },
         ];
     };
     EmployeeList.prototype.trackByEmpCode = function (index, employee) {
         return employee.code;
     };
-    EmployeeList.prototype.gettotalemployee = function () {
+    EmployeeList.prototype.getTotalEmployeesCount = function () {
         return this.employees.length;
     };
-    EmployeeList.prototype.getmaleemployee = function () {
+    EmployeeList.prototype.getMaleEmployeesCount = function () {
         return this.employees.filter(function (e) { return e.gender === "Male"; }).length;
     };
-    EmployeeList.prototype.getfemaleemployee = function () {
+    EmployeeList.prototype.getFemaleEmployeesCount = function () {
         return this.employees.filter(function (g) { return g.gender === "Female"; }).length;
+    };
+    EmployeeList.prototype.onEmployeeCountRadioButtonChange = function (selectedRadioButtonValue) {
+        this.selectedEmployeeCountRadioButton = selectedRadioButtonValue;
     };
     EmployeeList = __decorate([
         core_1.Component({

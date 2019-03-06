@@ -27,7 +27,15 @@ export class EmployeeList {
                 {
                     code: 'emp104', name: 'Mary', gender: 'Female',
                     annualSalary: 6500.826, dateOfBirth: '10/14/1980'
-                },
+            },
+            {
+                code: 'emp105', name: 'Steve', gender: 'Female',
+                annualSalary: 7700.481, dateOfBirth: '11/18/1979'
+            },
+            {
+                code: 'emp106', name: 'Steve obs', gender: 'Male',
+                annualSalary: 7700.481, dateOfBirth: '11/18/1979'
+            },
             ]
     }
     getEmployees(): void {
@@ -48,6 +56,14 @@ export class EmployeeList {
                 code: 'emp104', name: 'Mary', gender: 'Female',
                 annualSalary: 6500.826, dateOfBirth: '14/10/1980'
             },
+            {
+                code: 'emp105', name: 'Steve', gender: 'Female',
+                annualSalary: 7700.481, dateOfBirth: '11/18/1979'
+            },
+            {
+                code: 'emp106', name: 'Steve obs', gender: 'Male',
+                annualSalary: 7700.481, dateOfBirth: '11/18/1979'
+            },
         ];
 
 
@@ -57,16 +73,20 @@ export class EmployeeList {
     }
 
 
-    gettotalemployee(): number {
+    getTotalEmployeesCount(): number {
         return this.employees.length;
 
     }
-    getmaleemployee(): number {
+    getMaleEmployeesCount(): number {
         return this.employees.filter(e => e.gender === "Male").length;
     }
-    getfemaleemployee(): number {
+    getFemaleEmployeesCount(): number {
         return this.employees.filter(g => g.gender === "Female").length;
 
+    }
+    selectedEmployeeCountRadioButton: string = 'All';
+    onEmployeeCountRadioButtonChange(selectedRadioButtonValue: string): void {
+        this.selectedEmployeeCountRadioButton = selectedRadioButtonValue;
     }
 }
 

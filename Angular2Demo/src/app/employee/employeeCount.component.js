@@ -11,7 +11,12 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require("@angular/core");
 var employeeCountclass = (function () {
     function employeeCountclass() {
+        this.selectedRadioButtonValue = 'All';
+        this.countRadioButtonSelectionChanged = new core_1.EventEmitter();
     }
+    employeeCountclass.prototype.onRadioButtonSelectionChange = function () {
+        this.countRadioButtonSelectionChanged.emit(this.selectedRadioButtonValue);
+    };
     return employeeCountclass;
 }());
 __decorate([
@@ -26,6 +31,10 @@ __decorate([
     core_1.Input(),
     __metadata("design:type", Number)
 ], employeeCountclass.prototype, "female", void 0);
+__decorate([
+    core_1.Output(),
+    __metadata("design:type", core_1.EventEmitter)
+], employeeCountclass.prototype, "countRadioButtonSelectionChanged", void 0);
 employeeCountclass = __decorate([
     core_1.Component({
         selector: "employeeCount",
