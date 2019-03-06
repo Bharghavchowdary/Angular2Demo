@@ -1,0 +1,8 @@
+version: '3'
+
+services:
+  angular2demo:
+    image: angular2demo
+    build:
+      context: .\Angular2Demo
+      dockerfile: Dockerfile
