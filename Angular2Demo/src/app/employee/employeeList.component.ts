@@ -1,4 +1,5 @@
 ﻿import { Component } from '@angular/core'
+import { IEmployee} from './employee'
 
 @Component({
     selector: "list-Employee",
@@ -7,8 +8,8 @@
 
 })
 export class EmployeeList {
-    employees: any[];
-
+    employees: IEmployee[];
+ 
     constructor() {
         this.employees =
             [
