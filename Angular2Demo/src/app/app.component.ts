@@ -1,12 +1,13 @@
 import { Component } from '@angular/core';
 
+
 @Component({
     selector: 'my-app1',
     templateUrl: `./app.component.html`,
 
 })
 
-export class AppComponent {
+export class AppComponent   {
     applyBoldClass: boolean = true;
     firstName: string = 'Hello<script>alert("Hacked");</script> World';
     lastName: string = '';
@@ -20,4 +21,5 @@ export class AppComponent {
         console.log("Button Clicked");
     }
     name: string = 'Tom';
-    }
+    entered: string = 'Pragim';
+}

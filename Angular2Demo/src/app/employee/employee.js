@@ -1,5 +1,4 @@
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
 //export class Employee implements IEmployee {
 //    //public code: string;
 //    //public name: string;
@@ -13,5 +12,5 @@ Object.defineProperty(exports, "__esModule", { value: true });
 //    //computeMonthlySalary(annualSalary: number): number {
 //    //    return annualSalary / 12;
 //    //}
-//}
+//} 
 //# sourceMappingURL=employee.js.map

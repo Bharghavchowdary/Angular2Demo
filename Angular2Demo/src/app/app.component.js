@@ -15,6 +15,7 @@ var AppComponent = (function () {
         this.isDisabled = false;
         this.classesToApply = 'italicsClass boldClass colorClass';
         this.name = 'Tom';
+        this.entered = 'Pragim';
     }
     AppComponent.prototype.getFullName = function () {
         return this.firstName + ' ' + this.lastName;
